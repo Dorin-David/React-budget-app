@@ -1,0 +1,41 @@
+@import '../_colors';
+
+.List {
+    width: 45%; 
+    height: 35%;
+    padding: 10px;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.Card {
+    border-bottom: 1px solid $red;
+    flex: 1 1 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        font-size: 1.3rem;
+        color: $red;
+        flex: 0 1 200px;
+    }
+    .ButtonWrapper {
+          width: 100px;
+        * {
+            margin: auto 5px;
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+        *:hover {
+           cursor: pointer;
+           opacity: 1;
+        }
+        .editBtn {
+            color: $blue-btn;
+        }
+        .deleteBtn {
+            color: red;
+        } 
+    }
+}

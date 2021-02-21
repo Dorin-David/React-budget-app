@@ -1,0 +1,36 @@
+.Container {
+  width: 45%;
+  height: 35%;
+  padding: 10px;
+  border: 2px solid #26a026;
+  border-radius: 5px;
+}
+
+.Container input {
+  display: block;
+  width: 90%;
+  padding: 4px;
+  margin: 10px auto;
+  border: 2px solid #26a026;
+  border-radius: 4px;
+  color: #494545;
+}
+
+.Container button {
+  display: block;
+  padding: 7px;
+  margin: auto;
+  border: 2px solid #26a026;
+  border-radius: 4px;
+  background: #fff;
+  font-family: 'Open Sans', monospace;
+  font-size: 1rem;
+  color: #26a026;
+}
+
+.Container button:hover {
+  cursor: pointer;
+  color: #121212;
+  background: lightgreen;
+}
+/*# sourceMappingURL=Budget.module.css.map */

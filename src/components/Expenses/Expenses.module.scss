@@ -1,0 +1,35 @@
+@import '../_colors';
+
+.Container {
+    width: 45%;
+    height: 35%;
+    padding: 10px;
+    border: 2px solid $red;
+    border-radius: 5px;
+    input {
+        display: block;
+        width: 90%;
+        padding: 4px;
+        margin: 10px auto;
+        border: 2px solid $red;
+        border-radius: 4px;
+        color: $headers-gray
+    }
+    button {
+        display: block;
+        padding: 7px;
+        margin: auto;
+        border: 2px solid $red;
+        border-radius: 4px;
+        background: #fff;
+        font-family: 'Open Sans', monospace;
+        font-size: 1rem;
+        color: $red;
+    }
+    button:hover {
+        cursor: pointer;
+        color: #121212;
+        background: tomato;
+    }
+
+}
