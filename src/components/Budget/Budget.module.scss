@@ -1,24 +1,30 @@
 @import '../_colors';
 
 .Container {
-    width: 45%;
-    height: 35%;
+    flex: 1 1 45%;
+    min-width: 400px;
     padding: 10px;
     border: 2px solid $green;
     border-radius: 5px;
     input {
         display: block;
         width: 90%;
-        padding: 4px;
-        margin: 10px auto;
+        padding: 7px;
+        margin: 20px auto;
         border: 2px solid $green;
         border-radius: 4px;
         color: $headers-gray;
     }
+
+    h3 {
+        font-family: 'Open Sans', monospace;
+        color: $headers-gray;
+        text-align: center;
+    }
     button {
         display: block;
         padding: 7px;
-        margin: auto;
+        margin: 20px auto;
         border: 2px solid $green;
         border-radius: 4px;
         background: #fff;

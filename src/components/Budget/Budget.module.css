@@ -1,6 +1,8 @@
 .Container {
-  width: 45%;
-  height: 35%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 45%;
+          flex: 1 1 45%;
+  min-width: 400px;
   padding: 10px;
   border: 2px solid #26a026;
   border-radius: 5px;
@@ -9,17 +11,23 @@
 .Container input {
   display: block;
   width: 90%;
-  padding: 4px;
-  margin: 10px auto;
+  padding: 7px;
+  margin: 20px auto;
   border: 2px solid #26a026;
   border-radius: 4px;
   color: #494545;
 }
 
+.Container h3 {
+  font-family: 'Open Sans', monospace;
+  color: #494545;
+  text-align: center;
+}
+
 .Container button {
   display: block;
   padding: 7px;
-  margin: auto;
+  margin: 20px auto;
   border: 2px solid #26a026;
   border-radius: 4px;
   background: #fff;

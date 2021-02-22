@@ -1,17 +1,30 @@
 @import '../_colors';
 
 .List {
-    width: 45%; 
-    height: 35%;
+    flex: 1 1 45%;
+    min-width: 400px;
     padding: 10px;
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
+    height: 300px;
+    overflow: auto;
+    .Title {
+        flex: 0 1 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.3rem;
+        font-family: 'Open Sans', monospace;
+        color: $headers-gray;
+        > * {
+          flex: 0 0 110px;  
+        }
+    }
 }
 
 .Card {
     border-bottom: 1px solid $red;
-    flex: 1 1 80%;
+    flex: 0 1 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;

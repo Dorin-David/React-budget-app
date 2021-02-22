@@ -7,13 +7,13 @@ import classes from './Balance.module.css'
 const balance = props => {
      //set logic for balance color
      let color = classes.positiveCounter;
-     //right now, if it's less than half, it becomes red
-     if(props.balance > 0 && props.balance === props.expenses) {
-         color = classes.evenCounter
-        } else if(props.balance < props.expenses) {
-            color = classes.negativeCounter
-        }
-
+     let warningBalance = (props.balance / props.budget) * 100 <= 20;
+     if(warningBalance){
+         color = classes.negativeCounter;
+     } else if(props.balance < props.expenses){
+         color = classes.evenCounter;
+     }
+   
     return (
         <div className={classes.Container}>
             <div>

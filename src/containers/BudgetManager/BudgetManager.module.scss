@@ -10,10 +10,11 @@ body, html {
 
 .MainWrapper {
    width: 100%;
-   border: 2px solid $even;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    flex-wrap: wrap;
    box-sizing: border-box;
-
+   > div {
+      margin: 20px 10px; 
+   }
 }

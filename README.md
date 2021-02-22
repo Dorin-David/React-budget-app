@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Simple Budget App
+
+A simple budget App built using React, Sass and CSS modules. The markup was inspired by a project in vanilla JavaScript that you can find [here](https://www.youtube.com/watch?v=m_HJ3juuFvo). 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

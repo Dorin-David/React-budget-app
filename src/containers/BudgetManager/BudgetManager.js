@@ -12,10 +12,10 @@ class BudgetManager extends Component {
         currentExpense: '',
         currentExpenseVoice: '',
         totalExpenses: 0,
-        expensesList: [{info: 'food', cost: 200}]
+        expensesList: []
     }  
     updateBudget = (budget) => {
-        this.setState({budget: +budget.target.value})
+        this.setState({budget: budget.target.value})
     }
 
     passBudget = (budget) => {
@@ -26,7 +26,7 @@ class BudgetManager extends Component {
    }
 
     updateCurrentExpense = (expense) => {
-        this.setState({currentExpense: +expense.target.value});
+        this.setState({currentExpense: expense.target.value});
     }
    
     updateCurrentExpenseVoice = (voice) => {
@@ -39,9 +39,14 @@ class BudgetManager extends Component {
             info: this.state.currentExpenseVoice,
             cost: this.state.currentExpense
         }
+        if(currentExpenseItem.info === '' 
+          || this.state.expensesList.find(item => item.info === currentExpenseItem.info)){
+
+              return
+          }
         this.setState(state => ({
             expensesList: [...state.expensesList, currentExpenseItem],
-            totalExpenses: state.totalExpenses + state.currentExpense,
+            totalExpenses: state.totalExpenses + +state.currentExpense,
             currentExpense: '',
             currentExpenseVoice: '', 
         }))
@@ -69,24 +74,21 @@ class BudgetManager extends Component {
        
         return(
              <div className={classes.MainWrapper}>
-                 {/* here all the forms */}
                  <Budget updateBudget={this.updateBudget} passBudget={this.passBudget} budget={this.state.budget}/>
                  <Balance budget={this.state.passedBudget} expenses={this.state.totalExpenses} 
                           balance={this.state.passedBudget - this.state.totalExpenses}/>
-                  {/* below we could add another component, that accepts children: */}
                  <Expenses updateExpense={this.updateCurrentExpense} 
                            updateExpenseVoice={this.updateCurrentExpenseVoice}
                            passExpense={this.passCurrentExpense}
                            currentExpense={this.state.currentExpense}
                            currentExpenseVoice={this.state.currentExpenseVoice}
                  />  
-                 {/* this is the list of expenses */}
-                 <ExpensesLister expensesList={this.state.expensesList} editExpense={this.editExpense} deleteExpense={this.deleteExpense}/>
+                  <ExpensesLister expensesList={this.state.expensesList} editExpense={this.editExpense} deleteExpense={this.deleteExpense}/>
+                 
              </div>
         )
     }
 }
 
-// add a type checker for inputs
 
 export default BudgetManager
