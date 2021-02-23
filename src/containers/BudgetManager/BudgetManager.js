@@ -18,7 +18,7 @@ class BudgetManager extends Component {
         this.setState({budget: budget.target.value})
     }
 
-    passBudget = (budget) => {
+    passBudget = () => {
         this.setState(state => ({
             passedBudget: state.budget,
             budget: ''
@@ -30,7 +30,6 @@ class BudgetManager extends Component {
     }
    
     updateCurrentExpenseVoice = (voice) => {
-        // handle case where input is empty
         this.setState({currentExpenseVoice: voice.target.value});
     }
 
@@ -39,9 +38,8 @@ class BudgetManager extends Component {
             info: this.state.currentExpenseVoice,
             cost: this.state.currentExpense
         }
-        if(currentExpenseItem.info === '' 
+        if(currentExpenseItem.info.trim() === '' 
           || this.state.expensesList.find(item => item.info === currentExpenseItem.info)){
-
               return
           }
         this.setState(state => ({

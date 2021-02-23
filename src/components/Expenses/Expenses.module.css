@@ -2,7 +2,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 45%;
           flex: 1 1 45%;
-  min-width: 400px;
+  min-width: 300px;
   padding: 10px;
   border: 2px solid #d12a2a;
   border-radius: 5px;
